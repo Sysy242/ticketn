@@ -37,7 +37,7 @@ client.on('message', message => {
     }
 
     if (message.content === prefix + "delete") {
-        message.guild.channels.delete()
+        message.channel.delete()
     }
 
     if (message.content.toLowerCase().startsWith(prefix + "ticket")) {
