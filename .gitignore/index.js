@@ -34,12 +34,6 @@ client.on('message', message => {
             READ_MESSAGES: true
         });
 
-        var embed = new Discord.RichEmbed()
-        .setTitle("Tu vas bientot recevoir ton nito !!!")
-        .setDescription("Merci de patienter et de ne toucher a rien")
-        message.react('✅')
-        channel.send(embed)
-
     }
 
     if (message.content === prefix + "delete") {
