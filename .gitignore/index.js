@@ -41,6 +41,7 @@ client.on('message', message => {
     }
 
     if (message.content.toLowerCase().startsWith(prefix + "ticket")) {
+        message.delete()
         const reason = message.content.split(" ").slice(1).join(" ");
         if (!message.guild.roles.exists("name", "tickmanager")) return message.channel.send(`This server doesn't have a tickmanager role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
         if (message.guild.channels.exists("name", "ticket-" + message.author.id)) return message.channel.send(`Tu as deja une demmande en cours !`);
